@@ -109,7 +109,7 @@ export class EmpService {
     var headers = new HttpHeaders({
       'Authorization': localStorage.getItem('Token'),
    })
-    return this.http.post('http://localhost:3000/employee/', employee,{headers:headers})
+    return this.http.post('http://localhost:3000/employees/', employee,{headers:headers})
     .pipe(
       retry(3),
       catchError(this.errorHandler)
